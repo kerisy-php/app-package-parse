@@ -10,15 +10,8 @@
     <body>
     <div id="container">
 			<h1>
-				<a href="../">zip.js</a> <span class="small"></span>
+				<a href="../">Info.plist分析演示</a> <span class="small"></span>
 			</h1>
-
-			<div class="description">
-				A JavaScript library to zip and unzip files
-				<hr>
-			</div>
-
-			<h2>Read a zip file demo</h2>
 
 			<ol id="demo-container">
 				<li>
@@ -27,6 +20,11 @@
 						<input type="file" id="file-input">
 						<input type="hidden" id="creation-method-input" value="Blob" />
 					</label>
+				</li>
+				<li>
+					<span class="form-label">download zip content</span>
+					<div id="file-list">
+					</div>
 				</li>
 			</ol>
 
@@ -37,6 +35,7 @@
         <script type="text/javascript" src="../src/buffer.js"></script>
         <script type="text/javascript" src="../src/bplistParser.js"></script>
         <script type="text/javascript" src="../src/xmlplistParser.js"></script>
+	    <script type="text/javascript" src="js/format_json.js"></script>
 	    <script type="text/javascript" src="js/ipa_parser.js"></script>
         <script type="text/javascript">
         	// var plistObject = PlistParser.parse(xml);
