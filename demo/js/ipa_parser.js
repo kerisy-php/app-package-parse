@@ -43,9 +43,7 @@
 
 	(function() {
 		var fileInput = document.getElementById("file-input");
-		var unzipProgress = document.createElement("progress");
 		var fileList = document.getElementById("file-list");
-		var M = {};
 
 		var getStringFromBytes = function(bytes, start, end) {
 	        var string = "";
@@ -98,22 +96,11 @@
 				model.getEntryFile(entry, function(blob) {
 					var PDisplayName = BundleIdentifier = Version = '';
 					var PIcon = IconPng = [];
-
-					if (unzipProgress.parentNode)
-						unzipProgress.parentNode.removeChild(unzipProgress);
-					unzipProgress.value = 0;
-					unzipProgress.max = 0;
-
 					
 					ipaInfoPlistReader(blob, function(plistObject){
 						fileList.innerHTML = format(JSON.stringify(plistObject));
 						console.log(plistObject);
 					});
-					
-
-				}, function(current, total) {
-					unzipProgress.value = current;
-					unzipProgress.max = total;
 				});
 			}
 		}
