@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>apk manifest File Parse</title>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/demo.css">
+		<link href="css/css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    <div id="container">
+			<h1>
+				<a href="../">Apk包分析演示</a> <span class="small"></span>
+			</h1>
+
+			<ol id="demo-container">
+				<li>
+					<label>
+						<span class="form-label">choose a zip file</span>
+						<input type="file" id="file-input">
+						<input type="hidden" id="creation-method-input" value="Blob" />
+					</label>
+				</li>
+				<li>
+					<span class="form-label">json content</span>
+					<div id="file-list">
+					</div>
+				</li>
+			</ol>
+
+		</div>
+
+	    <script type="text/javascript" src="js/zip.js"></script>
+	    <script type="text/javascript" src="js/inflate.js"></script>
+        <script type="text/javascript" src="../src/buffer.js"></script>
+        <script type="text/javascript" src="../src/apkManifestParser.js"></script>
+        <script type="text/javascript" src="../src/apkResourceFinder.js"></script>
+	    <script type="text/javascript" src="js/format_json.js"></script>
+	    <script type="text/javascript" src="js/apk_parser.js"></script>
+        <script type="text/javascript">
+        	// var plistObject = PlistParser.parse(xml);
+        	// console.log(plistObject);
+        </script>
+    </body>
+</html>
